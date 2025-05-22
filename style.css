@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #0a0f1c; /* Blu notte */
-  color: #C8A453; /* Oro armonizzato */
+  background-color: #0a0f1c;
+  color: #C8A453;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,28 +32,25 @@ input[type="password"] {
 }
 
 button {
+  padding: 10px 20px;
   background-color: #C8A453;
-  color: #0a0f1c;
-  padding: 10px 15px;
-  margin-left: 10px;
   border: none;
+  color: #0a0f1c;
   cursor: pointer;
-  font-weight: bold;
+  margin-left: 10px;
 }
 
 button:hover {
-  background-color: #b99446;
+  background-color: #b8943f;
 }
 
-#errorMessage {
-  color: red;
-  margin-top: 10px;
-}
-
-/* Optional: disclaimer */
 .disclaimer {
   font-size: 0.9em;
   color: #C8A453;
   margin-top: 25px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
   font-style: italic;
 }
