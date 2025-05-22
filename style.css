@@ -1,27 +1,44 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: #0a0f1c;
   color: #C8A453;
+  min-height: 100vh;
+}
+
+body {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-y: auto;
 }
 
 .container {
-  text-align: center;
   border: 2px solid #C8A453;
-  padding: 40px;
+  padding: 40px 30px;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  text-align: center;
+  background-color: transparent;
 }
 
 .logo {
   width: 160px;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 5px #C8A453);
+  animation: breathingGlow 4s ease-in-out infinite;
+}
+
+@keyframes breathingGlow {
+  0% { filter: drop-shadow(0 0 4px #C8A453); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 12px #C8A453); transform: scale(1.02); }
+  100% { filter: drop-shadow(0 0 4px #C8A453); transform: scale(1); }
 }
 
 input[type="password"] {
@@ -63,3 +80,24 @@ button:hover {
 .legal a {
   color: #c8a453;
   text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  input[type="password"], button {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  button {
+    margin-left: 0;
+  }
+}
