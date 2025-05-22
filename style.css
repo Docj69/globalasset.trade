@@ -19,8 +19,9 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 160px;
   margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px #C8A453);
 }
 
 input[type="password"] {
@@ -29,28 +30,30 @@ input[type="password"] {
   background: transparent;
   color: white;
   margin-top: 10px;
+  width: 70%;
 }
 
 button {
   padding: 10px 20px;
   background-color: #C8A453;
-  border: none;
   color: #0a0f1c;
+  border: none;
   cursor: pointer;
   margin-left: 10px;
 }
 
 button:hover {
-  background-color: #b8943f;
+  background-color: #b08c3e;
+}
+
+#errorMessage {
+  color: red;
+  margin-top: 10px;
 }
 
 .disclaimer {
-  font-size: 0.9em;
+  margin-top: 30px;
+  font-size: 0.85em;
+  font-style: italic;
   color: #C8A453;
-  margin-top: 25px;
-  font-style: italic;
-  line-height: 1.5;
-}
-
-  font-style: italic;
 }
