@@ -51,8 +51,19 @@ button:hover {
   margin-top: 10px;
 }
 
-.disclaimer {
-  margin-top: 30px;
+.disclaimer, .legal {
+  color: #c8a453;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.legal a {
+  color: #c8a453;
+  text-decoration: underline;
+}
   font-size: 0.85em;
   font-style: italic;
   color: #C8A453;
