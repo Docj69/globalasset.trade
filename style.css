@@ -32,13 +32,24 @@ body {
 .logo {
   width: 160px;
   margin-bottom: 20px;
-  animation: breathingGlow 4s ease-in-out infinite;
+  border-radius: 50%;
+  animation: pulseGlow 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #C8A453);
 }
 
-@keyframes breathingGlow {
-  0% { filter: drop-shadow(0 0 4px #C8A453); transform: scale(1); }
-  50% { filter: drop-shadow(0 0 12px #C8A453); transform: scale(1.02); }
-  100% { filter: drop-shadow(0 0 4px #C8A453); transform: scale(1); }
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #C8A453);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #C8A453);
+    transform: scale(1.03);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #C8A453);
+    transform: scale(1);
+  }
 }
 
 input[type="password"] {
