@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Asset Management – Geschützter Bereich</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+
+  <style>
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      color: #C8A453;
+      z-index: 100;
+    }
+
+    .lang-switcher a {
+      text-decoration: none;
+      color: #C8A453;
+      margin: 0 6px;
+      transition: color 0.3s ease;
+    }
+
+    .lang-switcher a:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .lang-switcher {
+        font-size: 12px;
+        top: 10px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lang-switcher">
+    <a href="/index.html">EN</a> | <a href="/de/index.html" class="active">DE</a>
+  </div>
+
+  <div class="container">
+    <img src="../logo.png" alt="GAM Logo" class="logo animated-logo" />
+
+    <h1>GLOBAL ASSET MANAGEMENT</h1>
+    <h2>🔐 GESCHÜTZTER BEREICH</h2>
+    <p>Bitte geben Sie das Passwort ein, um auf vertrauliche Inhalte zuzugreifen.</p>
+
+    <input type="password" id="passwordInput" placeholder="Passwort" />
+    <button onclick="checkPassword()">🔓 Zugang</button>
+
+    <p id="errorMessage"></p>
+
+    <p class="disclaimer">
+      Der Zugriff auf diese Plattform wird ausschließlich nach direkter und persönlicher Autorisierung durch den Eigentümer gewährt.
+    </p>
+    <p class="legal">
+      Unbefugter Zugriff, Vervielfältigung oder Verbreitung ist strengstens untersagt und kann rechtliche Konsequenzen nach sich ziehen.<br>
+      Koordinaten: 46° 12′ 32″ N, 6° 9′ 43″ E – Schweiz<br>
+      Kontakt: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
+      © Global Asset Management. Alle Rechte vorbehalten.
+    </p>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
