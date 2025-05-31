@@ -1,70 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Asset Management - Private Area</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon compatibile (ICO e PNG) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <!-- Barra Lingue -->
-  <style>
-    .lang-switcher {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 14px;
-      color: #C8A453;
-      z-index: 100;
-    }
-
-    .lang-switcher a {
-      text-decoration: none;
-      color: #C8A453;
-      margin: 0 6px;
-      transition: color 0.3s ease;
-    }
-
-    .lang-switcher a:hover {
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      .lang-switcher {
-        font-size: 12px;
-        top: 10px;
-        right: 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Asset Management - Private Area</title>
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Lingue -->
-  <div class="lang-switcher">
-    <a href="/index.html" class="active">EN</a> | <a href="/de/index.html">DE</a>
-  </div>
-
+  <!-- Logo e area login -->
   <div class="container">
     <img src="logo.png" alt="GAM Logo" class="logo animated-logo" />
-
+    
     <h1>GLOBAL ASSET MANAGEMENT</h1>
     <h2>🔐 PRIVATE AREA</h2>
     <p>Please enter the password to access confidential content.</p>
-
+    
     <input type="password" id="passwordInput" placeholder="Password" />
+    
+    <!-- Mostra/Nascondi Password -->
+    <label style="display: block; margin-top: 10px;">
+      <input type="checkbox" id="showPassword" style="margin-right: 4px;" /> Show Password
+    </label>
+    
     <button onclick="checkPassword()">🔓 Access</button>
 
-    <p id="errorMessage"></p>
-
     <p class="disclaimer">
-      Access to this platform is granted solely upon direct and personal authorization by the website owner.
-    </p>
-    <p class="legal">
+      Access to this platform is granted solely upon direct and personal authorization by the website owner.<br>
       Unauthorized access, reproduction, or distribution is strictly prohibited and may result in legal consequences.<br>
       46° 12′ 32″ N, 6° 9′ 43″ E Switzerland<br>
       Contact: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
@@ -72,6 +33,22 @@
     </p>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const passwordInput = document.getElementById('passwordInput');
+    const showPassword = document.getElementById('showPassword');
+
+    showPassword.addEventListener('change', () => {
+      passwordInput.type = showPassword.checked ? 'text' : 'password';
+    });
+
+    function checkPassword() {
+      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // la tua password reale
+      if (passwordInput.value === correctPassword) {
+        window.location.href = 'landing.html'; // reindirizza alla landing page
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
+  </script>
 </body>
 </html>
