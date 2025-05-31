@@ -19,10 +19,20 @@
     border: 1px solid #d4af37;
     border-radius: 8px;
     padding: 30px;
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+    animation: breathing 3s infinite ease-in-out;
+    margin-bottom: 20px;
+  }
+  @keyframes breathing {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
   }
   h1, h2 {
     color: #d4af37;
-    text-align: center;
   }
   p {
     line-height: 1.6;
@@ -30,7 +40,6 @@
   }
   .password-section {
     margin-top: 30px;
-    text-align: center;
   }
   input[type="password"] {
     padding: 8px;
@@ -48,10 +57,18 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  .home-link {
+    display: block;
+    margin-top: 20px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
   <div class="container">
+    <img src="logo.png" alt="GAM Logo" class="logo" />
     <h1>Global Asset Management</h1>
     <p>Welcome to Global Asset Management, where precision meets excellence in the art of investment.</p>
     <p>In today’s fast-paced financial environment, identifying opportunities that are both lucrative and secure is no easy task. Our strategic approach is meticulously designed to uncover these rare gems — investments that not only outperform traditional options, but also prioritize your capital’s safety. With us, your funds remain firmly in your bank account throughout the process, eliminating unnecessary transfers and providing absolute peace of mind.</p>
@@ -79,9 +96,25 @@
     
     <div class="password-section">
       <p>To access confidential documents, please enter the password:</p>
-      <input type="password" placeholder="Enter password" />
-      <button>Enter</button>
+      <input type="password" id="secondPasswordInput" placeholder="Enter password" />
+      <button onclick="checkSecondPassword()">Enter</button>
     </div>
+
+    <a href="index.html" class="home-link">🔙 Torna alla Home</a>
   </div>
+
+  <script>
+    function checkSecondPassword() {
+      const passwordInput = document.getElementById('secondPasswordInput').value;
+      // Esempio di password semplice (puoi sostituire con la tua logica)
+      const validPassword = "SuperSecret123";
+      if (passwordInput === validPassword) {
+        window.location.href = "private.html";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
 </body>
 </html>
+
