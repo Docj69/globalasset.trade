@@ -10,26 +10,6 @@
     background-color: #0D0D1A;
     color: #ddd;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .lang-switcher {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    color: #C8A453;
-    z-index: 100;
-  }
-  .lang-switcher a {
-    text-decoration: none;
-    color: #C8A453;
-    margin: 0 6px;
-    transition: color 0.3s ease;
-  }
-  .lang-switcher a:hover {
-    color: white;
   }
   .container {
     max-width: 800px;
@@ -73,15 +53,16 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  .disclaimer {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
-
-  <!-- Barra selezione lingua -->
-  <div class="lang-switcher">
-    <a href="/index.html" class="active">EN</a> | <a href="/de/index.html">DE</a>
-  </div>
-
   <div class="container">
     <h1>Global Asset Management</h1>
     <p>Welcome to Global Asset Management, where precision meets excellence in the art of investment.</p>
@@ -116,6 +97,8 @@
       </label>
       <button onclick="checkPassword()">Enter</button>
     </div>
+
+    <p class="disclaimer">Disclaimer: All investment strategies are based on thorough analysis and customized to each client. Funds remain in your bank account and are not moved, ensuring maximum security and transparency.</p>
   </div>
 
   <script>
@@ -127,9 +110,9 @@
     });
 
     function checkPassword() {
-      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // tua password reale
+      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // Sostituisci con la tua password reale
       if (passwordInput.value === correctPassword) {
-        window.location.href = 'private.html';
+        window.location.href = 'private.html'; // Reindirizza alla pagina privata
       } else {
         alert('Incorrect password. Please try again.');
       }
