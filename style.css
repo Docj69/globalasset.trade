@@ -153,3 +153,8 @@ button:hover {
     right: 20px;
   }
 }
+/* Test rapido per verificare la cache */
+.language-bar {
+  background-color: hotpink !important;
+}
+
