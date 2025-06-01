@@ -15,20 +15,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 20px 20px 20px; /* Aggiunto padding-top extra */
+  padding: 60px 20px 20px 20px; /* Spazio extra in alto per la barra lingua */
   overflow-y: auto;
-  position: relative; /* Assicura che la barra EN|DE resti visibile */
+  position: relative;
 }
 
 /* Barra selezione lingua in alto a destra */
 .lang-switcher {
-  position: fixed; /* Fissa la barra */
-  top: 10px; /* Più vicino al bordo superiore */
+  position: fixed;
+  top: 10px;
   right: 30px;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
   color: #C8A453;
-  z-index: 9999; /* Più alto per assicurare la visibilità */
+  z-index: 9999;
 }
 
 .lang-switcher a {
@@ -76,7 +76,6 @@ body {
   }
 }
 
-/* Fading animato all’ingresso */
 @keyframes fadeInSoft {
   from {
     opacity: 0;
