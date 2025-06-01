@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 60px 20px 20px 20px; /* Spazio extra in alto per la barra lingua */
+  padding: 20px 20px 20px 20px; /* Spazio extra in alto per la barra lingua */
   overflow-y: auto;
   position: relative;
 }
