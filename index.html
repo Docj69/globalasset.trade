@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Asset Management</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Asset Management</title>
+<link rel="stylesheet" href="style.css" />
+
+<style>
+  body {
+    background-color: #0D0D1A;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+  }
+  .lang-switcher {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+  }
+  .lang-switcher a {
+    color: #C8A453;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #111;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px #d4af37; }
+    50% { box-shadow: 0 0 25px #d4af37; }
+  }
+  h1, h2 {
+    color: #d4af37;
+    margin: 10px 0;
+  }
+  p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  input[type="password"], input[type="text"] {
+    padding: 8px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    background: #222;
+    color: #d4af37;
+    width: 50%;
+  }
+  label {
+    font-size: 0.9rem;
+    margin-left: 8px;
+    color: #C8A453;
+  }
+  button {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .disclaimer {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-style: italic;
+  }
+</style>
 </head>
+
 <body>
-  <!-- Language bar -->
-  <div class="language-bar">
-    <a href="/index.html">EN</a> | <a href="/de/index.html">DE</a>
+  <div class="lang-switcher">
+    <a href="/index.html" class="active">EN</a> | <a href="/de/index.html">DE</a>
   </div>
 
-  <!-- Main content -->
   <div class="container">
-    <img src="favicon.png" alt="GAM Logo" class="logo animated-logo" />
+    <img src="favicon.png" alt="GAM Logo" class="logo" />
     <h1>GLOBAL ASSET MANAGEMENT</h1>
-    <h2>🔒 PRIVATE AREA</h2>
-    <p>Please enter the password to access confidential content.</p>
+    <h2>🔐 PRIVATE AREA</h2>
 
-    <form>
-      <input type="password" id="password" placeholder="Password" required />
-      <div class="show-password">
-        <input type="checkbox" id="show-password" />
-        <label for="show-password">Show Password</label>
-      </div>
-      <button type="submit">🔒 Access</button>
-    </form>
+    <p>Welcome to Global Asset Management, where precision meets excellence in the art of investment.</p>
+    <p>In today’s fast-paced financial environment, identifying opportunities that are both lucrative and secure is no easy task. Our strategic approach is meticulously designed to uncover these rare gems — investments that not only outperform traditional options, but also prioritize your capital’s safety.</p>
+    <p>With us, your funds remain <strong>firmly in your bank account</strong> throughout the process, eliminating <strong>unnecessary transfers</strong> and providing <strong>absolute peace of mind</strong>.</p>
+
+    <div class="password-section">
+      <p>Please enter the password to access confidential content.</p>
+      <input type="password" id="password" placeholder="Password" />
+      <label>
+        <input type="checkbox" id="showPassword" /> Show Password
+      </label>
+      <button onclick="checkPassword()">🔓 Access</button>
+    </div>
 
     <p class="disclaimer">
       Access to this platform is granted solely upon direct and personal authorization by the website owner.<br>
       Unauthorized access, reproduction, or distribution is strictly prohibited and may result in legal consequences.<br>
-      46° 12' 32" N, 6° 9' 43" E Switzerland<br>
-      Contact: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a>
+      Coordinates: 46° 12′ 32″ N, 6° 9′ 43″ E – Switzerland<br>
+      Contact: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
+      &copy; 2025 Global Asset Management. All rights reserved.
     </p>
   </div>
 
-  <footer>
-    &copy; 2025 Global Asset Management. All rights reserved.
-  </footer>
-
   <script>
-    // Show/Hide Password toggle
-    document.getElementById('show-password').addEventListener('change', function () {
-      const pwInput = document.getElementById('password');
-      pwInput.type = this.checked ? 'text' : 'password';
+    const pwInput = document.getElementById('password');
+    const showPw = document.getElementById('showPassword');
+    showPw.addEventListener('change', () => {
+      pwInput.type = showPw.checked ? 'text' : 'password';
     });
+
+    function checkPassword() {
+      const correctPassword = 'YOUR_PASSWORD_HERE'; // Sostituisci qui con la password
+      if (pwInput.value === correctPassword) {
+        window.location.href = 'landing.html'; // Vai alla pagina landing
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
   </script>
 </body>
 </html>
