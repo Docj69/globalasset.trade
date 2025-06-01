@@ -15,14 +15,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px; /* Aggiunto padding-top extra */
   overflow-y: auto;
+  position: relative; /* Assicura che la barra EN|DE resti visibile */
 }
 
 /* Barra selezione lingua in alto a destra */
 .lang-switcher {
-  position: absolute;
-  top: 20px;
+  position: fixed; /* Fissa la barra */
+  top: 10px; /* Più vicino al bordo superiore */
   right: 30px;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
