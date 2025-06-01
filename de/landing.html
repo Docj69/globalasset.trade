@@ -5,17 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Global Asset Management</title>
 <link rel="stylesheet" href="../style.css" />
+<style>
+  body {
+    background-color: #0D0D1A;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+  }
+  .language-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+    color: #C8A453;
+  }
+  .language-bar a {
+    text-decoration: none;
+    color: #C8A453;
+    margin: 0 6px;
+    transition: color 0.3s ease;
+  }
+  .language-bar a:hover {
+    color: white;
+  }
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+    background: #111;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    animation: pulse 4s infinite;
+  }
+  @keyframes pulse {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  h1, h2 {
+    color: #d4af37;
+    text-align: center;
+  }
+  p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .password-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  input[type="password"], input[type="text"] {
+    padding: 8px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    background: #222;
+    color: #d4af37;
+  }
+  label {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    cursor: pointer;
+    color: #C8A453;
+  }
+  button {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .disclaimer {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
-  <!-- Barra lingua -->
-  <div class="lang-switcher">
+  <div class="language-bar">
     <a href="/landing.html">EN</a> | <a href="/de/landing.html" class="active">DE</a>
   </div>
 
   <div class="container">
+    <img src="../logo.png" alt="GAM Logo" class="logo" />
+
     <h1>Global Asset Management</h1>
     <p>Willkommen bei Global Asset Management, wo Präzision auf Exzellenz in der Kunst der Investition trifft.</p>
-    <p>In der heutigen schnelllebigen Finanzwelt ist es nicht einfach, Chancen zu finden, die sowohl lukrativ als auch sicher sind. Unser strategischer Ansatz ist sorgfältig darauf ausgelegt, diese seltenen Gelegenheiten aufzuspüren – Investitionen, die nicht nur traditionelle Optionen übertreffen, sondern auch die Sicherheit Ihres Kapitals priorisieren. Bei uns bleibt Ihr Kapital <strong>fest auf Ihrem Bankkonto</strong> und wird nicht bewegt, wodurch unnötige Transfers entfallen und absolute Sicherheit gewährleistet wird.</p>
+    <p>In der heutigen schnelllebigen Finanzwelt ist es nicht einfach, Chancen zu finden, die sowohl lukrativ als auch sicher sind. Unser strategischer Ansatz ist sorgfältig darauf ausgelegt, diese seltenen Gelegenheiten aufzuspüren – Investitionen, die nicht nur traditionelle Optionen übertreffen, sondern auch die Sicherheit Ihres Kapitals priorisieren. Bei uns bleibt Ihr Kapital fest auf Ihrem Bankkonto und wird nicht bewegt, wodurch unnötige Transfers entfallen und absolute Sicherheit gewährleistet wird.</p>
 
     <h2>Warum mit uns?</h2>
     <p>Unser Team aus erfahrenen Fachleuten bringt jahrzehntelange Erfahrung und tiefes Branchenwissen ein, um maßgeschneiderte Anlagestrategien zu entwickeln, die überdurchschnittliche Renditen bei höchster Sicherheit bieten.</p>
@@ -36,7 +121,7 @@
     <p>Wir gehen über finanzielles Wachstum hinaus. Unser Engagement für positiven Wandel schließt die Unterstützung humanitärer Projekte ein, die Gemeinschaften helfen und dringende Bedürfnisse adressieren. Mit uns investieren Sie auch in soziale Verantwortung.</p>
 
     <h2>Unser Versprechen an Sie</h2>
-    <p>Mit Global Asset Management erreichen Sie nicht nur herausragende finanzielle Ergebnisse. Sie arbeiten auch mit einem Team zusammen, das Ihre Sicherheit an erste Stelle setzt und jedes Detail mit Transparenz und Sorgfalt behandelt – von Vertragsunterzeichnung bis zur Umsetzung.</p>
+    <p>Mit Global Asset Management erreichen Sie nicht nur herausragende finanzielle Ergebnisse. Sie arbeiten auch mit einem Team zusammen, das Ihre Sicherheit an erste Stelle setzt und jedes Detail mit Transparenz und Sorgfalt behandelt – von Vertragsunterzeichnungen bis zur Umsetzung.</p>
 
     <div class="password-section">
       <p>Um auf vertrauliche Dokumente zuzugreifen, geben Sie bitte das Passwort ein:</p>
@@ -46,11 +131,14 @@
       </label>
       <button onclick="checkPassword()">Zugang</button>
     </div>
+
+    <p class="disclaimer">Disclaimer: Alle Anlagestrategien basieren auf sorgfältiger Analyse und werden individuell auf jeden Kunden abgestimmt. Ihr Kapital bleibt auf Ihrem Bankkonto und wird nicht bewegt, wodurch maximale Sicherheit und Transparenz gewährleistet werden.</p>
   </div>
 
   <script>
     const passwordInput = document.getElementById('passwordInput');
     const showPassword = document.getElementById('showPassword');
+
     showPassword.addEventListener('change', () => {
       passwordInput.type = showPassword.checked ? 'text' : 'password';
     });
@@ -58,9 +146,9 @@
     function checkPassword() {
       const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3';
       if (passwordInput.value === correctPassword) {
-        window.location.href = 'private.html';
+        window.location.href = '../private.html';
       } else {
-        alert('Falsches Passwort. Bitte versuchen Sie es erneut.');
+        alert('Incorrect password. Please try again.');
       }
     }
   </script>
