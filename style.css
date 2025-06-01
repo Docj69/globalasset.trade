@@ -20,7 +20,7 @@ body {
   position: relative;
 }
 
-/* Barra selezione lingua in alto a destra */
+/* Barra di selezione lingua */
 .language-bar {
   position: fixed;
   top: 10px;
@@ -42,6 +42,7 @@ body {
   color: white;
 }
 
+/* Contenitore principale */
 .container {
   border: 2px solid #C8A453;
   padding: 40px 30px;
@@ -56,5 +57,106 @@ body {
   width: 160px;
   margin-bottom: 20px;
   border-radius: 50%;
-  animation: pulseGlow 3.5s ease-in-out infinite, fadeInSoft 1.5s ease-out forwards;
-  animation
+  filter: drop-shadow(0 0 5px #C8A453);
+}
+
+/* Animazione “respiro” */
+.animated-logo {
+  animation: breathe 3.5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #C8A453);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #C8A453);
+    transform: scale(1.05);
+  }
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #C8A453;
+  background: transparent;
+  color: white;
+  margin-top: 10px;
+  width: 70%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #C8A453;
+  color: #0a0f1c;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #b08c3e;
+}
+
+.show-password {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.disclaimer, .legal {
+  color: #c8a453;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.legal a {
+  color: #c8a453;
+  text-decoration: underline;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  input[type="password"], button {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  .language-bar {
+    font-size: 12px;
+    top: 10px;
+    right: 20px;
+  }
+}
