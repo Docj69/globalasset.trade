@@ -21,7 +21,7 @@ body {
 }
 
 /* Barra selezione lingua in alto a destra */
-.lang-switcher {
+.language-bar {
   position: fixed;
   top: 10px;
   right: 30px;
@@ -31,14 +31,14 @@ body {
   z-index: 9999;
 }
 
-.lang-switcher a {
+.language-bar a {
   text-decoration: none;
   color: #C8A453;
   margin: 0 6px;
   transition: color 0.3s ease;
 }
 
-.lang-switcher a:hover {
+.language-bar a:hover {
   color: white;
 }
 
@@ -57,104 +57,4 @@ body {
   margin-bottom: 20px;
   border-radius: 50%;
   animation: pulseGlow 3.5s ease-in-out infinite, fadeInSoft 1.5s ease-out forwards;
-  animation-delay: 0s, 0.3s;
-  filter: drop-shadow(0 0 5px #C8A453);
-}
-
-@keyframes pulseGlow {
-  0% {
-    filter: drop-shadow(0 0 5px #C8A453);
-    transform: scale(1);
-  }
-  50% {
-    filter: drop-shadow(0 0 15px #C8A453);
-    transform: scale(1.03);
-  }
-  100% {
-    filter: drop-shadow(0 0 5px #C8A453);
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInSoft {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-input[type="password"] {
-  padding: 10px;
-  border: 1px solid #C8A453;
-  background: transparent;
-  color: white;
-  margin-top: 10px;
-  width: 70%;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #C8A453;
-  color: #0a0f1c;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-button:hover {
-  background-color: #b08c3e;
-}
-
-#errorMessage {
-  color: red;
-  margin-top: 10px;
-}
-
-.disclaimer, .legal {
-  color: #c8a453;
-  font-size: 0.85rem;
-  margin-top: 20px;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.legal a {
-  color: #c8a453;
-  text-decoration: underline;
-}
-
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
-
-  .logo {
-    width: 120px;
-  }
-
-  input[type="password"], button {
-    width: 100%;
-    margin: 10px 0 0 0;
-  }
-
-  button {
-    margin-left: 0;
-  }
-
-  .lang-switcher {
-    font-size: 12px;
-    top: 10px;
-    right: 20px;
-  }
-}
-/* Test rapido per verificare la cache */
-.language-bar {
-  background-color: hotpink !important;
-}
-
+  animation
