@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Asset Management</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  .container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 30px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background-color: #111;
+    text-align: center;
+    color: #d4af37;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 140px; /* Più grande rispetto alla landing */
+    animation: breathe 2s infinite alternate;
+  }
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 5px #d4af37);
+    }
+    100% {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px #d4af37);
+    }
+  }
+  .disclaimer {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #d4af37;
+    font-style: italic;
+  }
+  .disclaimer a {
+    color: #3fa9f5; /* Email in blu chiaro */
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="GAM Logo" class="logo" />
+
+    <h1>GLOBAL ASSET MANAGEMENT</h1>
+    <h2>🔐 PRIVATE AREA</h2>
+    <p>Please enter the password to access confidential content.</p>
+
+    <div>
+      <input type="password" id="password" placeholder="Password" required />
+      <div class="show-password">
+        <input type="checkbox" id="show-password" />
+        <label for="show-password">Show Password</label>
+      </div>
+      <button onclick="checkPassword()">🔒 Access</button>
+    </div>
+
+    <p class="disclaimer" style="text-align: center;">
+      Access to this platform is granted solely upon direct and personal authorization by the website owner.<br>
+      Unauthorized access, reproduction, or distribution is strictly prohibited and may result in legal consequences.<br>
+      Coordinates: 46° 12' 32" N, 6° 9' 43" E – Switzerland<br>
+      Contact: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
+      &copy; 2022 Global Asset Management. All rights reserved.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('show-password').addEventListener('change', function () {
+      const pwInput = document.getElementById('password');
+      pwInput.type = this.checked ? 'text' : 'password';
+    });
+
+    function checkPassword() {
+      const passwordInput = document.getElementById('password');
+      const correctPassword = 'Alive5-Greasily8-Finalist2-Drift4-Five5';
+      if (passwordInput.value === correctPassword) {
+        window.location.href = 'private.html';
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
+  </script>
+</body>
+
