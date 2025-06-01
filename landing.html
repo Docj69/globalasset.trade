@@ -11,6 +11,20 @@
     color: #ddd;
     font-family: Arial, sans-serif;
   }
+  .language-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 14px;
+  }
+  .language-bar a {
+    color: #C8A453;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+  .language-bar a:hover {
+    color: white;
+  }
   .container {
     max-width: 800px;
     margin: 60px auto;
@@ -18,6 +32,18 @@
     border: 1px solid #d4af37;
     border-radius: 8px;
     padding: 30px;
+    position: relative;
+  }
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    pointer-events: none;
   }
   h1, h2 {
     color: #d4af37;
@@ -60,10 +86,33 @@
     font-style: italic;
     text-align: center;
   }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    animation: breathe 2s infinite alternate;
+  }
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 5px #d4af37);
+    }
+    100% {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px #d4af37);
+    }
+  }
 </style>
 </head>
+
 <body>
+  <div class="language-bar">
+    <a href="landing.html" class="active">EN</a> | <a href="/de/landing.html">DE</a>
+  </div>
+
   <div class="container">
+    <img src="logo.png" alt="GAM Logo" class="logo" />
+
     <h1>Global Asset Management</h1>
     <p>Welcome to Global Asset Management, where precision meets excellence in the art of investment.</p>
     <p>In today’s fast-paced financial environment, identifying opportunities that are both lucrative and secure is no easy task. Our strategic approach is meticulously designed to uncover these rare gems — investments that not only outperform traditional options, but also prioritize your capital’s safety. With us, your funds remain <strong>firmly in your bank account</strong> throughout the process, eliminating <strong>unnecessary transfers</strong> and providing <strong>absolute peace of mind</strong>.</p>
@@ -110,9 +159,9 @@
     });
 
     function checkPassword() {
-      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // Sostituisci con la tua password reale
+      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // Test only
       if (passwordInput.value === correctPassword) {
-        window.location.href = 'private.html'; // Reindirizza alla pagina privata
+        window.location.href = 'private.html';
       } else {
         alert('Incorrect password. Please try again.');
       }
