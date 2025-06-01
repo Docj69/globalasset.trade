@@ -3,82 +3,132 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Global Asset Management</title>
+<title>Global Asset Management – Overview</title>
 <link rel="stylesheet" href="style.css" />
 <style>
+  body {
+    background-color: #0D0D1A;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
   .container {
     max-width: 800px;
-    margin: 80px auto;
+    margin: 40px auto;
     padding: 30px;
     border: 1px solid #d4af37;
     border-radius: 8px;
     background-color: #111;
-    text-align: center;
+  }
+  h1, h2 {
     color: #d4af37;
   }
-  .logo {
-    display: block;
-    margin: 0 auto 20px;
-    width: 140px; /* Più grande rispetto alla landing */
-    animation: breathe 2s infinite alternate;
+  h1 {
+    text-align: center;
   }
-  @keyframes breathe {
-    0% {
-      transform: scale(1);
-      filter: drop-shadow(0 0 5px #d4af37);
-    }
-    100% {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 20px #d4af37);
-    }
+  p {
+    margin-bottom: 16px;
+  }
+  strong {
+    color: #d4af37;
+  }
+  .password-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  input[type="password"] {
+    padding: 8px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    background: #222;
+    color: #d4af37;
+  }
+  label {
+    font-size: 0.8rem;
+    margin-left: 8px;
+    cursor: pointer;
+    color: #C8A453;
+  }
+  button {
+    background: #d4af37;
+    color: #111;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 4px;
+    cursor: pointer;
   }
   .disclaimer {
     margin-top: 30px;
     font-size: 0.75rem;
-    color: #d4af37;
+    color: #aaa;
     font-style: italic;
+    text-align: center;
   }
-  .disclaimer a {
-    color: #3fa9f5; /* Email in blu chiaro */
-    text-decoration: none;
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    animation: breathe 2s infinite alternate;
+  }
+  @keyframes breathe {
+    0% { transform: scale(1); filter: drop-shadow(0 0 5px #d4af37); }
+    100% { transform: scale(1.05); filter: drop-shadow(0 0 20px #d4af37); }
   }
 </style>
 </head>
 <body>
+
   <div class="container">
     <img src="logo.png" alt="GAM Logo" class="logo" />
 
-    <h1>GLOBAL ASSET MANAGEMENT</h1>
-    <h2>🔐 PRIVATE AREA</h2>
-    <p>Please enter the password to access confidential content.</p>
+    <h1>Global Asset Management</h1>
+    <p>Welcome to Global Asset Management, where precision meets excellence in the art of investment.</p>
+    <p>In today’s fast-paced financial environment, identifying opportunities that are both lucrative and secure is no easy task. Our strategic approach is meticulously designed to uncover these rare gems — investments that not only outperform traditional options, but also prioritize your capital’s safety. With us, your funds remain <strong>firmly in your bank account</strong> throughout the process, eliminating <strong>unnecessary transfers</strong> and providing <strong>absolute peace of mind</strong>.</p>
 
-    <div>
-      <input type="password" id="password" placeholder="Password" required />
-      <div class="show-password">
-        <input type="checkbox" id="show-password" />
-        <label for="show-password">Show Password</label>
-      </div>
-      <button onclick="checkPassword()">🔒 Access</button>
+    <h2>Why Partner with Us?</h2>
+    <p>Our team of seasoned professionals brings decades of experience and industry insight, enabling us to craft bespoke investment strategies that deliver superior returns while maintaining exceptional security.</p>
+
+    <h2>Tailored Strategies</h2>
+    <p>We take the time to understand your unique financial goals, creating a personalized plan that aligns seamlessly with your aspirations — 100% risk-free.</p>
+
+    <h2>Unparalleled Security</h2>
+    <p>By employing advanced risk management tools and a diversified approach, we ensure your investments generate consistent, high-yield returns while maintaining the highest level of safety.</p>
+
+    <h2>Minimum Investment, Maximum Impact</h2>
+    <p>Our exclusive investment opportunities start at €100 million, with no upper limit, ensuring complete flexibility and scalability for discerning investors.</p>
+
+    <h2>Consulting Excellence</h2>
+    <p>At Global Asset Management, we make you feel at home. Our team of experts — with over 30 years of experience in the financial sector — is dedicated to providing a seamless, secure, and rewarding investment journey.</p>
+
+    <h2>Project Management & Humanitarian Initiatives</h2>
+    <p>We go beyond financial growth. Our commitment to positive change includes supporting humanitarian projects that uplift communities and address urgent needs. When you invest with us, you align your capital with a broader mission of social responsibility.</p>
+
+    <h2>Our Commitment to You</h2>
+    <p>Partnering with Global Asset Management means more than achieving outstanding financial performance. It means working with a team that places your peace of mind at the forefront, ensuring every detail of your investment is handled with transparency and care. From face-to-face contract signings to meticulous execution, we are your trusted ally in building long-term prosperity.</p>
+
+    <div class="password-section">
+      <p>To access confidential documents, please enter the password:</p>
+      <input type="password" id="passwordInput" placeholder="Enter password" />
+      <label>
+        <input type="checkbox" id="showPassword" style="margin-right: 4px;" /> Show Password
+      </label>
+      <button onclick="checkPassword()">Enter</button>
     </div>
 
-    <p class="disclaimer" style="text-align: center;">
-      Access to this platform is granted solely upon direct and personal authorization by the website owner.<br>
-      Unauthorized access, reproduction, or distribution is strictly prohibited and may result in legal consequences.<br>
-      Coordinates: 46° 12' 32" N, 6° 9' 43" E – Switzerland<br>
-      Contact: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
-      &copy; 2022 Global Asset Management. All rights reserved.
-    </p>
+    <p class="disclaimer">Disclaimer: All investment strategies are based on thorough analysis and customized to each client. Funds remain in your bank account and are not moved, ensuring maximum security and transparency.</p>
   </div>
 
   <script>
-    document.getElementById('show-password').addEventListener('change', function () {
-      const pwInput = document.getElementById('password');
-      pwInput.type = this.checked ? 'text' : 'password';
+    const passwordInput = document.getElementById('passwordInput');
+    const showPassword = document.getElementById('showPassword');
+
+    showPassword.addEventListener('change', () => {
+      passwordInput.type = showPassword.checked ? 'text' : 'password';
     });
 
     function checkPassword() {
-      const passwordInput = document.getElementById('password');
-      const correctPassword = 'Alive5-Greasily8-Finalist2-Drift4-Five5';
+      const correctPassword = 'Reverse5-Tug6-Hatless9-Undated5-Grouped9-Dork3'; // Example/test password
       if (passwordInput.value === correctPassword) {
         window.location.href = 'private.html';
       } else {
@@ -86,5 +136,6 @@
       }
     }
   </script>
-</body>
 
+</body>
+</html>
