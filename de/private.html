@@ -3,30 +3,65 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Global Asset Management – Geschützter Bereich</title>
+<title>Vertraulicher Bereich - Global Asset Management</title>
 <link rel="stylesheet" href="../style.css" />
+<style>
+  .privacy-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .lang-switcher {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #C8A453;
+    z-index: 100;
+  }
+  .lang-switcher a {
+    text-decoration: none;
+    color: #C8A453;
+    margin: 0 6px;
+    transition: color 0.3s ease;
+  }
+  .lang-switcher a:hover {
+    color: white;
+  }
+  @media (max-width: 600px) {
+    .lang-switcher {
+      font-size: 12px;
+      top: 10px;
+      right: 20px;
+    }
+  }
+</style>
 </head>
 <body>
-  <!-- Barra lingua -->
+
+  <!-- Barra delle lingue -->
   <div class="lang-switcher">
     <a href="/private.html">EN</a> | <a href="/de/private.html" class="active">DE</a>
   </div>
 
   <div class="container">
-    <h1>GLOBAL ASSET MANAGEMENT</h1>
-    <h2>🔐 GESCHÜTZTER BEREICH</h2>
-    <p>Hier können Sie vertrauliche Dokumente herunterladen.</p>
-    <p><a href="../KYC-Template.pdf" target="_blank">📎 KYC-Vorlage herunterladen (PDF)</a></p>
-    <p>Kontakt: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a></p>
-
-    <p class="disclaimer">
-      Der Zugriff auf diese Plattform wird ausschließlich nach direkter und persönlicher Autorisierung durch den Eigentümer gewährt.
+    <img src="../logo.png" alt="GAM Logo" class="logo" />
+    <h1>Willkommen im vertraulichen Bereich</h1>
+    <p>Hier können Sie Dokumente herunterladen:</p>
+    <p>
+      📎 <a href="../KYC_Template.pdf" download>KYC-Vorlage herunterladen (PDF)</a>
     </p>
-    <p class="legal">
-      Unbefugter Zugriff, Vervielfältigung oder Verbreitung ist strengstens untersagt und kann rechtliche Konsequenzen nach sich ziehen.<br>
-      Koordinaten: 46° 12′ 32″ N, 6° 9′ 43″ E – Schweiz<br>
-      Kontakt: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a><br>
-      © Global Asset Management. Alle Rechte vorbehalten.
+    <p>
+      Kontakt: <a href="mailto:info@globalasset.trade">info@globalasset.trade</a>
+    </p>
+
+    <p class="privacy-note">
+      Hinweis: Alle Anlagestrategien basieren auf gründlicher Analyse und werden individuell auf jeden Kunden zugeschnitten.
+      Gelder bleiben auf Ihrem Bankkonto und werden nicht bewegt, um maximale Sicherheit und Transparenz zu gewährleisten.
     </p>
   </div>
 </body>
