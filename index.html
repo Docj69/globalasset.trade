@@ -19,7 +19,7 @@
   .logo {
     display: block;
     margin: 0 auto 20px;
-    width: 140px; /* Più grande rispetto alla landing */
+    width: 140px;
     animation: breathe 2s infinite alternate;
   }
   @keyframes breathe {
@@ -32,6 +32,23 @@
       filter: drop-shadow(0 0 20px #d4af37);
     }
   }
+  .language-bar {
+    margin-bottom: 20px;
+  }
+  .language-bar a {
+    margin: 0 10px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .language-bar a:hover {
+    background-color: #d4af37;
+    color: #111;
+  }
   .disclaimer {
     margin-top: 30px;
     font-size: 0.75rem;
@@ -39,13 +56,17 @@
     font-style: italic;
   }
   .disclaimer a {
-    color: #3fa9f5; /* Email in blu chiaro */
+    color: #3fa9f5;
     text-decoration: none;
   }
 </style>
 </head>
 <body>
   <div class="container">
+    <div class="language-bar">
+      <a href="index.html">EN</a> | <a href="index-de.html">DE</a>
+    </div>
+
     <img src="logo.png" alt="GAM Logo" class="logo" />
 
     <h1>GLOBAL ASSET MANAGEMENT</h1>
@@ -87,4 +108,4 @@
     }
   </script>
 </body>
-
+</html>
